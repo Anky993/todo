@@ -1,0 +1,28 @@
+.note-bar {
+  box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%), 0 2px 6px 2px rgb(60 64 67 / 15%);
+  border-radius: 8px;
+  padding: 12px 16px 12px 16px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+[contenteditable=true]:empty:before{
+  content: attr(placeholder);
+  pointer-events: none;
+  display: block; /* For Firefox */
+}
+
+span.icons {
+  display: flex;
+  margin-left: -10rem;
+}
+
+.icons > i {
+  padding: 12px;
+  margin: 5px;
+}
+
+.icons > i:hover {
+  border-radius: 50%;
+  background-color: #e7e9ea;
+}

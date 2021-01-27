@@ -1,0 +1,46 @@
+hr {
+  width: 100%;
+}
+
+.magnify {
+  position: absolute;
+  font-size: 14px;
+  margin: 0.1rem 0.3rem;
+  padding: 0.7rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.magnify:hover {
+  background-color: #e7e9ea;
+  border-radius: 50%;
+}
+
+.clear {
+  font-size: 14px;
+  margin-left: -3rem;
+  margin-top: 0.1rem;
+  padding: 0.7rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.clear:hover {
+  background-color: #e7e9ea;
+  border-radius: 50%;
+}
+
+.search-bar {
+  padding: 0.5rem 3rem;
+  font-size: 1rem;
+  background-color: #f1f3f5;
+  border-radius: 8px;
+  border: none;
+}
+
+.search-bar:focus {
+  background-color: white;
+  outline: none;
+  box-shadow: 0 1px 1px 0 rgba(65,69,73,0.3), 0 1px 3px 1px rgba(65,69,73,0.15);
+  border: none;
+}

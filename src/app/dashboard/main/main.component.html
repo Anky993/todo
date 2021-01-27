@@ -1,1 +1,27 @@
 <app-nav></app-nav>
+
+<div class="container justify-content-start">
+
+  <div class="d-flex mx-auto col-5 input-group-lg">
+    <div contenteditable="true" aria-multiline="true" placeholder="Take a note..." [ngStyle]="takeANoteDisplay"
+    role="textbox" class="form-control me-2 row note-bar" aria-label="Take a note..." (click)="takeNote()" ></div>
+
+    <!-- <input class="form-control me-2 note-bar" type="text" placeholder="Take a Note..." [ngStyle]="takeANoteDisplay" aria-label="note" (click)="takeNote()"> -->
+    <span class="icons" [ngStyle]="takeANoteDisplay">
+      <i class="fas fa-list-ul"></i>
+      <i class="fas fa-pencil-alt"></i>
+      <i class="far fa-image"></i>
+    </span>
+
+    <div [ngStyle]="tilteDisplay" class="form-control me-2 note-bar" id="titleDisplay" #titleDisplay >
+      <div contenteditable="true" aria-multiline="true" placeholder="Title"
+      role="textbox" class="form-control" aria-label="Title"  ></div>
+      <div contenteditable="true" aria-multiline="true" placeholder="Take a Note..." id="takeANote"
+      role="textbox" class="form-control" aria-label="Take a Note..." (keydown.escape)="takeANote.blur()" autofocus #takeANote ></div>
+
+    </div>
+
+
+    <!-- <i class="fas fa-times clear"></i> -->
+  </div>
+</div>
