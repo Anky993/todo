@@ -10,7 +10,7 @@ export class MainComponent implements OnInit {
   takeANoteDisplay;
   tilteDisplay = {
     display : 'none'
-  }
+  };
 
   constructor(private renderer: Renderer2) { }
   @ViewChild('titleDisplay') menu: ElementRef;
@@ -18,19 +18,19 @@ export class MainComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  takeNote(){
+  takeNote() {
     setTimeout(() => {
-      var elem = this.renderer.selectRootElement('#takeANote');
+      const elem = this.renderer.selectRootElement('#takeANote');
       // console.log("focus onssssdsds jsj ",this.renderer.selectRootElement('#titleDisplay') )
 
-      this.renderer.listen(elem, "focus", () => {
+      this.renderer.listen(elem, 'focus', () => {
 
-        this.renderer.listen('window', 'click',(e:Event)=>{
-         if( e.target!==this.menu.nativeElement  ){
-            console.log("clicked outside")
+        this.renderer.listen('window', 'click', (e: Event) => {
+         if ( e.target !== this.menu.nativeElement  ) {
+            console.log('clicked outside');
         }
      });
-        console.log("focus on ")
+        console.log('focus on ');
         // var element = this.renderer.selectRootElement('#takeANote');
         // this.renderer.listen(elem, "focus", () => {
         // console.log("focus ossssn ")
@@ -47,9 +47,9 @@ export class MainComponent implements OnInit {
       elem.focus();
     }, 0);
 
-    console.log("sds")
-    this.takeANoteDisplay = {display : 'none' }
-    this.tilteDisplay = {display : 'block'}
+    console.log('sds');
+    this.takeANoteDisplay = {display : 'none' };
+    this.tilteDisplay = {display : 'block'};
 
   }
 
