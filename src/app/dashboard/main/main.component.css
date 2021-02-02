@@ -6,7 +6,11 @@
   font-weight: 400;
 }
 
-[contenteditable=true]:empty:before{
+.parent {
+  position: relative;
+}
+
+ [contenteditable=true]:empty:before{
   content: attr(placeholder);
   pointer-events: none;
   display: block; /* For Firefox */
@@ -14,12 +18,15 @@
 
 span.icons {
   display: flex;
-  margin-left: -10rem;
+  position: absolute;
+  right: 1.2rem;
+  top: 0;
 }
 
 .icons > i {
   padding: 12px;
   margin: 5px;
+  cursor: pointer;
 }
 
 .icons > i:hover {
